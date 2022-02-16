@@ -199,10 +199,18 @@ textarea {
   background: #fff;
 }
 
-input:focus,
-button:focus,
-select:focus {
-  outline: 0;
+:focus {
+  outline: none;
+  border: none;
+}
+
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none;
+}
+
+.focus-visible {
+  outline: 2px solid var(--hover);
+  outline-offset: 2px;
 }
 
 pre {
@@ -221,10 +229,6 @@ hr,
   height: 1px;
 }
 
-input:focus,
-select:focus {
-  border: 1px solid #9ab3f5;
-}
 
 input::placeholder,
 input:placeholder-shown,
